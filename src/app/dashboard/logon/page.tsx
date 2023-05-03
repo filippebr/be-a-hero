@@ -29,26 +29,51 @@ export default function Logon() {
   }
 
   return (
-    <div className="logon-container">
-      <section className="form">
-        <Image src={'/logo.svg'} width={50} height={50} alt="Be The Hero"/>
-        <form onSubmit={handleLogin}>
-          <h1>Faça seu logon</h1>
-          <input 
-            placeholder="Sua ID" 
-            value={id}
-            onChange={e => setId(e.target.value)}
+    <>
+      <div className="h-screen bg-gray-50 flex flex-col items-center justify-center px-4 sm:px-4 lg:px-6">
+        <section className="sm:mx-auto sm:w-full sm:max-w-md">
+          <Image 
+            className="mx-auto h-12 w-auto"
+            src={'/logo.svg'} 
+            width={100} 
+            height={100} 
+            alt="Be The Hero"
           />
-          <button className="button" type="submit">Entrar</button>
+          <form onSubmit={handleLogin}>
+            <h1 className="mt-4 py-2 text-center text-3xl">
+              Faça seu login
+            </h1>
+            <input 
+              className="mt-4"
+              placeholder="Sua ID" 
+              value={id}
+              onChange={e => setId(e.target.value)}
+            />
+            <button className="w-full h-22 mt-4 py-4 bg-red-500 hover:bg-red-700 rounded-lg text-white items-center font-bold text-md transition-opacity duration-300" type="submit">Entrar</button>
 
-          <Link className="back-link" href="/register">
-            <FiLogIn size="16" color="#E02041" />
-            Não tenho cadastro
-          </Link>
-        </form>
-      </section>
-      <Image src={'/heroes.png'} width={500} height={500} alt="Heroes"/>
-    </div>
+            <Link className="flex text-md items-center mt-4 text-gray-900 hover:text-gray-500 font-medium transition-opacity duration-300" href="/register">
+              <FiLogIn className="mr-2 text-xl text-red-500" />
+              Não tenho cadastro
+            </Link>
+
+            <div className="flex text-md items-center mt-4 text-gray-900 hover:text-gray-500">
+              <a href="#" className="font-medium">
+                Esqueceu o password
+              </a>
+            </div>
+          </form>
+        </section>
+        <Image
+          className="mt-4"           
+          src={'/heroes.png'} 
+          alt="Heroes"
+          width={450}
+          height={450}
+          quality={35}
+          priority
+          />
+      </div>
+    </>
   );
 }
 
