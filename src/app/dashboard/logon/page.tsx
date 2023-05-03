@@ -1,30 +1,32 @@
 'use client'
 
 import React, { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import { FiLogIn } from 'react-icons/fi';
 
-// import api from '../../services/api';
+import api from '../../api/services/axiosClient';
 
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Logon() {
   const [id, setId] = useState('');
-  // const history = useHistory();
+  const router = useRouter();
 
   async function handleLogin(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     try {
-      // const response = await api.post('sessions', { id });
+      const response = await api.post('sessions', { id });
+
+      console.log(response);
 
       localStorage.setItem('ongId', id);
-      // localStorage.setItem('ongName', response.data.name);
+      localStorage.setItem('ongName', response.data.name);
 
-      // history.push('/profile');
+      router.push('/profile');
     } catch (err) {
-      alert("Falha no Login, tente novamente.");
+      console.log("Falha no Login, tente novamente.");
     }
   }
 
@@ -58,11 +60,11 @@ export default function Logon() {
                 Não tenho cadastro
               </Link>
 
-              <div className="text-md items-center text-gray-900 hover:text-gray-500">
+              {/* <div className="text-md items-center text-gray-900 hover:text-gray-500">
                 <a href="#" className="font-medium">
                   Esqueci o password
                 </a>
-              </div>
+              </div> */}
 
             </div>
             
