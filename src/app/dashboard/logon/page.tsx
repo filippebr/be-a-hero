@@ -32,13 +32,15 @@ export default function Logon() {
     <>
       <div className="h-screen grid bg-gray-50 items-center justify-center px-4 sm:px-4 lg:px-6" >
         <section className="sm:mx-auto sm:w-full sm:max-w-md">
-          <Image 
-            className="mx-auto h-12 w-auto"
-            src={'/logo.svg'} 
-            width={100} 
-            height={100} 
-            alt="Be The Hero"
-          />
+          <div className="py-1">
+            <Image 
+              className="mx-auto h-14 w-auto"
+              src={'/logo.svg'} 
+              width={100} 
+              height={100} 
+              alt="Be The Hero"
+            />
+          </div>          
           <form onSubmit={handleLogin}>
             <h1 className="mt-4 py-2 text-center text-3xl">
               Faça seu login
