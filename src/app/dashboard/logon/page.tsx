@@ -71,11 +71,10 @@ export default function Logon() {
           </form>
         </section>
         <Image
-          className="mt-4 "           
           src={'/heroes.png'} 
           alt="Heroes"
-          width={450}
-          height={450}
+          width={596*.7}
+          height={574*.7}
           quality={35}
           priority
           />
