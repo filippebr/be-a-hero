@@ -33,8 +33,8 @@ export default function Logon() {
   return (
     <>
       <div className="h-screen grid bg-gray-50 items-center justify-center px-4 sm:px-4 lg:px-6" >
-        <section className="sm:mx-auto sm:w-full sm:max-w-md">
-          <div className="py-1">
+        <div className="sm:mx-auto sm:w-full sm:max-w-md">
+          <header className="py-1">
             <Image 
               className="mx-auto h-14 w-auto"
               src={'/logo.svg'} 
@@ -42,7 +42,7 @@ export default function Logon() {
               height={100} 
               alt="Be The Hero"
             />
-          </div>          
+          </header>          
           <form onSubmit={handleLogin}>
             <h1 className="mt-4 py-2 text-center text-3xl">
               Faça seu login
@@ -69,7 +69,7 @@ export default function Logon() {
             </div>
             
           </form>
-        </section>
+        </div>
         <Image
           src={'/heroes.png'} 
           alt="Heroes"

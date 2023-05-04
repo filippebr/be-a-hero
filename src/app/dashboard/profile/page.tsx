@@ -18,7 +18,6 @@ type Incident = {
   ong_id: string;
 };
 
-
 export default function Profile() {
   const [incidents, setIncidents] = useState<Incident[]>([]);
   
@@ -59,49 +58,65 @@ export default function Profile() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
-      <header className="flex items-center">
+    <div className="bg-gray-50 justify-center mx-auto px-4">
+      <div className="grid grid-flow-col items-center justify-around">
+      
         <Image 
-          className="h-24"
+          className="h-14"
           src={'/logo.svg'} 
           alt="Be The Hero" 
           width={100}
           height={100}
         />
-        <span className="text-xl ml-10" >Bem vinda, {ongName}</span>
 
-        <Link className="w-full h-22 mt-4 py-4 bg-red-500 hover:bg-red-700 rounded-lg text-white items-center font-bold text-md" href="/incidents/new">Cadastrar novo caso</Link>
-        <button className="h-20 w-24 rounded-sm border-2 border-slate-500 bg-transparent ml-6 hover:border-gray-700 " onClick={handleLogout} type="button">
-          <FiPower size={18} color="#E02041" />
-        </button>
-      </header>
+        <div className="text-xl">Bem vinda, {ongName}</div>
 
-      <h1>Casos cadastrados</h1>
+        <div className="" >
+          <Link 
+            className="p-4 bg-red-500 hover:bg-red-700 rounded-lg text-white items-center font-bold text-md" 
+            href="/incidents/new">
+              Cadastrar novo caso
+          </Link>
+          <button className="ml-6 p-6 rounded-xl border-2 bg-transparent border-slate-300 hover:border-slate-400" onClick={handleLogout} type="button">
+            <FiPower className="text-xl text-red-500" />
+          </button>
+        </div>    
+      </div>        
 
-      <div>
-        <ul>
-          {Array.isArray(incidents) && incidents.map(incident => (
-            <li key={incident.id}>
-              <strong>CASO:</strong>
-              <p>{incident.title}</p>
+        <div className="sm:mx-auto sm:w-full sm:max-w-md">
+          <div>
+            <h1 className="text-3xl font-bold">Casos cadastrados</h1>
 
-              <strong>DESCRIÇÃO:</strong>
-              <p>{incident.description}</p>
+            <div>
+              <ul>
+                {Array.isArray(incidents) && incidents.map(incident => (
+                  <li key={incident.id}>
+                    <strong>CASO:</strong>
+                    <p>{incident.title}</p>
 
-              <strong>Valor:</strong>
-              <p>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(incident.value)}</p>
-              
-              {/* in onClick I need the parameter to push the id  */}
-              {/* but when I push the parameter I executed the function */}
-              {/* to this thing not happen I just use the arrow function to create a new one */}
-              {/* this way I'm passing to the onClick a function not a return of a function */}
-              <button onClick={() => handleDeleteIncident(incident.id)} type="button">
-                <FiTrash2 size={20} color="#A8A8B3" />
-              </button>
-            </li>
-          ))}        
-        </ul>
-      </div>      
+                    <strong>DESCRIÇÃO:</strong>
+                    <p>{incident.description}</p>
+
+                    <strong>Valor:</strong>
+                    <p>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(incident.value)}</p>
+                    
+                    {/* in onClick I need the parameter to push the id */}
+                    {/* but when I push the parameter I executed the function */}
+                    {/* to this thing not happen I just use the arrow function to create a new one */}
+                    {/* this way I'm passing to the onClick a function not a return of a function */}
+                    <button onClick={() => handleDeleteIncident(incident.id)} type="button">
+                      <FiTrash2  />
+                    </button>
+                  </li>
+                ))}        
+              </ul>
+            </div> 
+          </div>
+        </div>
+          
+
+      
+         
     </div>
   )
 }
