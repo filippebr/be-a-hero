@@ -1,4 +1,10 @@
 {
   "typescript.tsdk": "node_modules\\typescript\\lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "explorer.compactFolders": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "editor.tabSize": 2
 }

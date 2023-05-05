@@ -1,14 +1,14 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { FiPower, FiTrash2 } from 'react-icons/fi';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { FiPower } from 'react-icons/fi';
 
 import api from '../../api/services/axiosClient';
 
-import './styles.css';
 import Link from 'next/link';
+import './styles.css';
 
 type Incident = {
   id: number;
@@ -58,66 +58,60 @@ export default function Profile() {
   }
 
   return (
-    <div className="bg-gray-50 justify-center mx-auto px-4">
-      <div className="grid grid-flow-col items-center justify-around">
-      
-        <Image 
-          className="h-14"
-          src={'/logo.svg'} 
-          alt="Be The Hero" 
-          width={100}
-          height={100}
-        />
+    <>
+      <div className="grid lg:grid-cols-2 grid-cols-1 items-center sm:mx-auto sm:w-full sm:max-w-7xl">
+        <div className="flex items-center px-6 lg:justify-self-start justify-around">
+          <Image 
+            className="h-14 mr-6"
+            src={'/logo.svg'} 
+            width={100} 
+            height={100} 
+            alt="Be The Hero"
+          />
 
-        <div className="text-xl">Bem vinda, {ongName}</div>
-
-        <div className="" >
+          <div className="text-xl">Bem vinda, {ongName}</div>
+        </div>
+        <div className="flex items-center px-6 lg:justify-self-end justify-around">
           <Link 
-            className="p-4 bg-red-500 hover:bg-red-700 rounded-lg text-white items-center font-bold text-md" 
+            className="mx-8 p-4 bg-red-500 hover:bg-red-700 rounded-lg text-white items-center font-bold text-md" 
             href="/incidents/new">
               Cadastrar novo caso
           </Link>
-          <button className="ml-6 p-6 rounded-xl border-2 bg-transparent border-slate-300 hover:border-slate-400" onClick={handleLogout} type="button">
+          <button className="p-6 rounded-xl border-2 bg-transparent border-slate-300 hover:border-slate-400" onClick={handleLogout} type="button">
             <FiPower className="text-xl text-red-500" />
           </button>
-        </div>    
+        </div>       
       </div>        
 
-        <div className="sm:mx-auto sm:w-full sm:max-w-md">
-          <div>
-            <h1 className="text-3xl font-bold">Casos cadastrados</h1>
+      <div className="px-6">
+        <div>
+          <h1 className="text-3xl font-bold my-4">Casos cadastrados</h1>
 
-            <div>
-              <ul>
-                {Array.isArray(incidents) && incidents.map(incident => (
-                  <li key={incident.id}>
-                    <strong>CASO:</strong>
-                    <p>{incident.title}</p>
+          <div className="my-4">
+            <ul className="grid lg:grid-cols-2 grid-cols-1 justify-around" >              
+              <li>
+                <p className="font-bold mb-1 mt-4">CASO: </p>
+                <p>Cadelinha atropelada</p>
+                <p className="font-bold mb-1 mt-4">DESCRIÇÃO: </p>
+                <p>A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas</p>
+                <p className="font-bold mb-1 mt-4">VALOR: </p>
+                <p>R$ 120,00</p>
+              </li>
 
-                    <strong>DESCRIÇÃO:</strong>
-                    <p>{incident.description}</p>
-
-                    <strong>Valor:</strong>
-                    <p>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(incident.value)}</p>
-                    
-                    {/* in onClick I need the parameter to push the id */}
-                    {/* but when I push the parameter I executed the function */}
-                    {/* to this thing not happen I just use the arrow function to create a new one */}
-                    {/* this way I'm passing to the onClick a function not a return of a function */}
-                    <button onClick={() => handleDeleteIncident(incident.id)} type="button">
-                      <FiTrash2  />
-                    </button>
-                  </li>
-                ))}        
-              </ul>
-            </div> 
-          </div>
+              <li>
+                <p className="font-bold mb-1 mt-4">CASO: </p>
+                <p>Cadelinha atropelada</p>
+                <p className="font-bold mb-1 mt-4">DESCRIÇÃO: </p>
+                <p>A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas</p>
+                <p className="font-bold mb-1 mt-4">VALOR: </p>
+                <p>R$ 120,00</p>
+              </li>
+            </ul>
+          </div> 
         </div>
-          
-
-      
+      </div>     
          
-    </div>
+    </>
   )
 }
 
