@@ -59,29 +59,34 @@ export default function Profile() {
 
   return (
     <>
-      <div className="grid lg:grid-cols-2 grid-cols-1 items-center sm:mx-auto sm:w-full sm:max-w-7xl">
-        <div className="flex items-center px-6 lg:justify-self-start justify-around">
-          <Image 
-            className="h-14 mr-6"
-            src={'/logo.svg'} 
-            width={100} 
-            height={100} 
-            alt="Be The Hero"
-          />
+      <header className="w-full mx-auto py-3 px-6 sm:px-12 lg:px-24">
+        <div className="grid grid-cols-12 gap-4 items-center justify-center">
+          <div className="col-span-2">
+            <Image 
+                className="h-14"
+                src={'/logo.svg'} 
+                width={100} 
+                height={100} 
+                alt="Be The Hero"
+              />
+          </div>       
 
-          <div className="text-xl">Bem vinda, {ongName}</div>
-        </div>
-        <div className="flex items-center px-6 lg:justify-self-end justify-around">
-          <Link 
-            className="mx-8 p-4 bg-red-500 hover:bg-red-700 rounded-lg text-white items-center font-bold text-md" 
-            href="/incidents/new">
-              Cadastrar novo caso
-          </Link>
-          <button className="p-6 rounded-xl border-2 bg-transparent border-slate-300 hover:border-slate-400" onClick={handleLogout} type="button">
-            <FiPower className="text-xl text-red-500" />
-          </button>
-        </div>       
-      </div>        
+          <div className="col-span-4">
+            <div className="text-xl">Bem vinda, {ongName}</div>
+          </div>
+          
+          <div className="col-span-6 items-center px-6 lg:justify-self-end justify-around">
+            <Link 
+              className="mx-8 p-4 bg-red-500 hover:bg-red-700 rounded-lg text-white items-center font-bold text-md" 
+              href="/incidents/new">
+                Cadastrar novo caso
+            </Link>        
+            <button className="p-6 rounded-xl border-2 bg-transparent border-slate-300 hover:border-slate-400" onClick={handleLogout} type="button">
+              <FiPower className="text-xl text-red-500" />
+            </button>
+          </div>  
+        </div>      
+      </header>  
 
       <div className="px-6">
         <div>
@@ -109,8 +114,7 @@ export default function Profile() {
             </ul>
           </div> 
         </div>
-      </div>     
-         
+      </div>         
     </>
   )
 }
