@@ -59,9 +59,9 @@ export default function Profile() {
 
   return (
     <>
-      <header className="w-full mx-auto py-3 px-6 sm:px-12 lg:px-24">
-        <div className="grid grid-cols-12 gap-4 items-center justify-center">
-          <div className="col-span-2">
+      <header className="py-3 px-4 sm:px-12 lg:px-24">
+        <div className="grid lg:grid-cols-12">
+          <div className="lg:col-span-2 justify-self-center">
             <Image 
                 className="h-14"
                 src={'/logo.svg'} 
@@ -71,17 +71,17 @@ export default function Profile() {
               />
           </div>       
 
-          <div className="col-span-4">
+          <div className="lg:col-span-4 py-3 justify-self-center">
             <div className="text-xl">Bem vinda, {ongName}</div>
           </div>
           
-          <div className="col-span-6 items-center px-6 lg:justify-self-end justify-around">
+          <div className="flex lg:col-span-6 lg:justify-self-end justify-self-center gap-6 items-center">
             <Link 
-              className="mx-8 p-4 bg-red-500 hover:bg-red-700 rounded-lg text-white items-center font-bold text-md" 
+              className="p-4 bg-red-500 hover:bg-red-700 rounded-lg text-white font-bold text-md" 
               href="/incidents/new">
                 Cadastrar novo caso
             </Link>        
-            <button className="p-6 rounded-xl border-2 bg-transparent border-slate-300 hover:border-slate-400" onClick={handleLogout} type="button">
+            <button className="p-4 rounded-md border-2 bg-transparent border-slate-300 hover:border-slate-400" onClick={handleLogout} type="button">
               <FiPower className="text-xl text-red-500" />
             </button>
           </div>  
@@ -89,11 +89,11 @@ export default function Profile() {
       </header>  
 
       <main className="">
-        <div className="grid grid-cols-12 py-3 px-6 sm:px-12 lg:px-24">
-          <h1 className="col-span-4 text-3xl font-bold my-4">Casos cadastrados</h1>
+        <div className="grid lg:grid-cols-12 py-3 px-6 sm:px-12 lg:px-24 ">
+          <h1 className="col-span-4 text-3xl font-bold my-4 lg:justify-self-start justify-self-center">Casos cadastrados</h1>
         </div>
         <div className="">
-          <ul className="grid grid-cols-12 gap-4 py-3 px-6 sm:px-12 lg:px-24" >              
+          <ul className="grid lg:grid-cols-12 gap-4 py-3 px-6 sm:px-12 lg:px-24" >              
             <li className="col-span-6">
               <p className="font-bold mb-1 mt-4">CASO: </p>
               <p>Cadelinha atropelada</p>
