@@ -88,33 +88,33 @@ export default function Profile() {
         </div>      
       </header>  
 
-      <div className="px-6">
-        <div>
-          <h1 className="text-3xl font-bold my-4">Casos cadastrados</h1>
-
-          <div className="my-4">
-            <ul className="grid lg:grid-cols-2 grid-cols-1 justify-around" >              
-              <li>
-                <p className="font-bold mb-1 mt-4">CASO: </p>
-                <p>Cadelinha atropelada</p>
-                <p className="font-bold mb-1 mt-4">DESCRIÇÃO: </p>
-                <p>A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas</p>
-                <p className="font-bold mb-1 mt-4">VALOR: </p>
-                <p>R$ 120,00</p>
-              </li>
-
-              <li>
-                <p className="font-bold mb-1 mt-4">CASO: </p>
-                <p>Cadelinha atropelada</p>
-                <p className="font-bold mb-1 mt-4">DESCRIÇÃO: </p>
-                <p>A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas</p>
-                <p className="font-bold mb-1 mt-4">VALOR: </p>
-                <p>R$ 120,00</p>
-              </li>
-            </ul>
-          </div> 
+      <main className="">
+        <div className="grid grid-cols-12 py-3 px-6 sm:px-12 lg:px-24">
+          <h1 className="col-span-4 text-3xl font-bold my-4">Casos cadastrados</h1>
         </div>
-      </div>         
+        <div className="">
+          <ul className="grid grid-cols-12 gap-4 py-3 px-6 sm:px-12 lg:px-24" >              
+            <li className="col-span-6">
+              <p className="font-bold mb-1 mt-4">CASO: </p>
+              <p>Cadelinha atropelada</p>
+              <p className="font-bold mb-1 mt-4">DESCRIÇÃO: </p>
+              <p>A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas</p>
+              <p className="font-bold mb-1 mt-4">VALOR: </p>
+              <p>R$ 120,00</p>
+            </li>
+
+            <li className="col-span-6">
+              <p className="font-bold mb-1 mt-4">CASO: </p>
+              <p>Cadelinha atropelada</p>
+              <p className="font-bold mb-1 mt-4">DESCRIÇÃO: </p>
+              <p>A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas</p>
+              <p className="font-bold mb-1 mt-4">VALOR: </p>
+              <p>R$ 120,00</p>
+            </li>
+          </ul>
+        </div> 
+      </main>
+              
     </>
   )
 }
