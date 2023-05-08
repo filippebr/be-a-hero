@@ -1,94 +1,109 @@
-// import React, { useState } from 'react';
-// import { FiArrowLeft } from 'react-icons/fi';
-// import Image from 'next/image';
+'use client'
 
-// // import api from '../../services/api';
-// import './styles.css';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import { FiArrowLeft } from 'react-icons/fi';
 
-// import logoImg from '../../assets/logo.svg';
-// import Link from 'next/link';
+// import api from '../../services/api';
+import './styles.css';
 
-// export default function Register() {
-//   const [name, setName] = useState('');
-//   const [email, setEmail] = useState('');
-//   const [whatsapp, setWhatsapp] = useState('');
-//   const [city, setCity] = useState('');
-//   const [uf, setUf] = useState('');
+import Link from 'next/link';
 
-//   async function handleRegister(e: React.FormEvent<HTMLFormElement>) {
-//     e.preventDefault();  
+export default function Register() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [whatsapp, setWhatsapp] = useState('');
+  const [city, setCity] = useState('');
+  const [uf, setUf] = useState('');
+
+  async function handleRegister(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();  
     
-//     const data = {
-//       name,
-//       email,
-//       whatsapp,
-//       city,
-//       uf,
-//     };
+    const data = {
+      name,
+      email,
+      whatsapp,
+      city,
+      uf,
+    };
 
-//     try {
-//       // const response = await api.post('/ongs', data);
+    try {
+      // const response = await api.post('/ongs', data);
 
-//       // alert(`Seu ID de acesso: ${response.data.id}`);
+      // alert(`Seu ID de acesso: ${response.data.id}`);
 
-//       // history.push('/');
-//     } catch {
-//       alert(`Erro no cadastro, tente novamente.`);
-//     }    
+      // history.push('/');
+    } catch {
+      alert(`Erro no cadastro, tente novamente.`);
+    }    
 
-//   }
+  }
 
-//   return (
-//     <div className="register-container">
-//       <div className="content">
-//         <section>
-//           <Image src={'/logo.svg'} width={100} height={100} alt="Be The Hero" />
-//           <h1>Cadastro</h1>
-//           <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
-          
-//           <Link className="back-link" href="/">
-//             <FiArrowLeft size="16" color="#E02041"/>
-//             Não tenho cadastro
-//           </Link>
-//         </section>
+  return (
+    <>    
+      <header className="py-3 px-4 sm:px-12 lg:px-24">
+        <div className="grid grid-rows-2">
+          <div className="justify-self-center">
+            <Image 
+                className="h-auto w-auto"
+                src={'/logo.svg'}                
+                alt="Be The Hero"
+                width={250}
+                height={106}
+                quality={70}
+                priority
+              />
+          </div> 
+          <div className="justify-self-center">
+            <h1 className="text-3xl">Cadastro</h1>
+            <p className="text-xl">Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
+            <Link className="back-link" href="/">
+              <FiArrowLeft size="16" color="#E02041"/>
+              Não tenho cadastro
+            </Link>
+          </div>         
+        </div>
+      </header>
 
-//         <form onSubmit={handleRegister}>
-//           <input 
-//             placeholder="Nome da ONG" 
-//             value={name}
-//             onChange={e => setName(e.target.value)}
-//           />
-//           <input 
-//             type="email" 
-//             placeholder="E-mail" 
-//             value={email}
-//             onChange={e => setEmail(e.target.value)}
-//           />
-//           <input 
-//             placeholder="WhatsApp" 
-//             value={whatsapp}
-//             onChange={e => setWhatsapp(e.target.value)}
-//           />
+      <section className="grid lg:grid-cols-12 py-3 px-4 sm:px-12 lg:px-24">
+        <form className="lg:col-span-12 justify-self-center" onSubmit={handleRegister}>
+          <input 
+            placeholder="Nome da ONG" 
+            value={name}
+            onChange={e => setName(e.target.value)}
+          />
+          <input 
+            type="email" 
+            placeholder="E-mail" 
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+          />
+          <input 
+            placeholder="WhatsApp" 
+            value={whatsapp}
+            onChange={e => setWhatsapp(e.target.value)}
+          />
 
-//           <div className="input-group">
-//             <input 
-//               placeholder="Cidade"
-//               value={city}
-//               onChange={e => setCity(e.target.value)}  
-//             />
-//             <input 
-//               placeholder="UF" 
-//               style={{ width: 80 }}
-//               value={uf}
-//               onChange={e => setUf(e.target.value)}   
-//             />            
-//           </div>
+          <div className="input-group">
+            <input 
+              placeholder="Cidade"
+              value={city}
+              onChange={e => setCity(e.target.value)}  
+            />
+            <input 
+              placeholder="UF" 
+              style={{ width: 80 }}
+              value={uf}
+              onChange={e => setUf(e.target.value)}   
+            />            
+          </div>
 
-//           <button className="button" type="submit">Cadastrar</button>
-//         </form>
-//       </div>
-//     </div>
-//   )
-// }
+          <button className="button" type="submit">Cadastrar</button>
+        </form>
+      </section>
+      
+    </>
+  )
+}
 
 

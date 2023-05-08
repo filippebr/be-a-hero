@@ -90,8 +90,8 @@ export default function Profile() {
         </div>      
       </header>  
 
-      <main className="">
-        <div className="grid lg:grid-cols-12 py-3 px-6 sm:px-12 lg:px-24 ">
+      <main className="py-3 px-6 sm:px-12 lg:px-24">
+        <div className="grid lg:grid-cols-12 ">
           <h1 className="col-span-4 text-3xl font-bold my-4 lg:justify-self-start justify-self-center">Casos cadastrados</h1>
         </div>
         <div className="">
