@@ -8,7 +8,6 @@ import { FiPower } from 'react-icons/fi';
 import api from '../../api/services/axiosClient';
 
 import Link from 'next/link';
-import './styles.css';
 
 type Incident = {
   id: number;
