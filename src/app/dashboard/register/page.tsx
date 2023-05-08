@@ -2,12 +2,10 @@
 
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { FiArrowLeft } from 'react-icons/fi';
 
 // import api from '../../services/api';
 import './styles.css';
 
-import Link from 'next/link';
 
 export default function Register() {
   const [name, setName] = useState('');
@@ -40,33 +38,29 @@ export default function Register() {
   }
 
   return (
-    <>    
-      <header className="py-3 px-4 sm:px-12 lg:px-24">
-        <div className="grid grid-rows-2">
-          <div className="justify-self-center">
-            <Image 
-                className="h-auto w-auto"
-                src={'/logo.svg'}                
-                alt="Be The Hero"
-                width={250}
-                height={106}
-                quality={70}
-                priority
-              />
-          </div> 
-          <div className="justify-self-center space-y-4">
-            <h1 className="text-3xl">Cadastro</h1>
-            <p className="text-xl">Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
-            <Link className="back-link" href="/">
-              <FiArrowLeft size="16" color="#E02041"/>
-              Não tenho cadastro
-            </Link>
-          </div>         
-        </div>
+    <div className="grid min-h-screen items-center">    
+      <header className="grid px-4 sm:px-12 lg:px-24 justify-center">
+        <Image 
+            className="h-auto w-auto"
+            src={'/logo.svg'}                
+            alt="Be The Hero"
+            width={250}
+            height={106}
+            quality={70}
+            priority
+          />
+      </header>        
+      <header className="grid grid-rows-2 px-4 sm:px-12 lg:px-24 space-y-4 items-center justify-center">
+        <h1 className="text-4xl">Cadastro</h1>
+        <p className="text-lg">Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
+        {/* <Link className="back-link" href="/">
+          <FiArrowLeft size="16" color="#E02041"/>
+          Não tenho cadastro
+        </Link> */}
       </header>
 
-      <section className="grid lg:grid-cols-12 py-3 px-4 sm:px-12 lg:px-24">
-        <form className="lg:col-span-12 justify-self-center mt-8 space-y-4" onSubmit={handleRegister}>
+      <section className="grid lg:grid-cols-12 px-4 sm:px-12 lg:px-24">
+        <form className="lg:col-span-12 justify-self-center space-y-4" onSubmit={handleRegister}>
           <input 
             placeholder="Nome da ONG" 
             value={name}
@@ -105,7 +99,7 @@ export default function Register() {
           </div>
         </form>
       </section>      
-    </>
+    </div>
   )
 }
 
