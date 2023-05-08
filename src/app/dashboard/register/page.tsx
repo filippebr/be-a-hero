@@ -101,7 +101,7 @@ export default function Register() {
             />            
           </div>
           <div className="flex justify-center">
-            <button className="p-4 mt-6 rounded-md border-2 bg-transparent border-slate-300 hover:border-slate-400" type="submit">Cadastrar</button>
+            <button className="relative w-full flex justify-center py-3 px-4 border border-transparent text-xl font-medium rounded-md text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Cadastrar</button>
           </div>
         </form>
       </section>      
