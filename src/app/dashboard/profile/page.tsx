@@ -63,11 +63,13 @@ export default function Profile() {
         <div className="grid lg:grid-cols-12">
           <div className="lg:col-span-2 justify-self-center">
             <Image 
-                className="h-14"
-                src={'/logo.svg'} 
-                width={100} 
-                height={100} 
+                className="h-auto w-auto"
+                src={'/logo.svg'}                
                 alt="Be The Hero"
+                width={250}
+                height={106}
+                quality={70}
+                priority
               />
           </div>       
 
