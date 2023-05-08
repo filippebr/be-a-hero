@@ -54,7 +54,7 @@ export default function Register() {
                 priority
               />
           </div> 
-          <div className="justify-self-center">
+          <div className="justify-self-center space-y-4">
             <h1 className="text-3xl">Cadastro</h1>
             <p className="text-xl">Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
             <Link className="back-link" href="/">
@@ -66,7 +66,7 @@ export default function Register() {
       </header>
 
       <section className="grid lg:grid-cols-12 py-3 px-4 sm:px-12 lg:px-24">
-        <form className="lg:col-span-12 justify-self-center" onSubmit={handleRegister}>
+        <form className="lg:col-span-12 justify-self-center mt-8 space-y-4" onSubmit={handleRegister}>
           <input 
             placeholder="Nome da ONG" 
             value={name}
@@ -84,24 +84,27 @@ export default function Register() {
             onChange={e => setWhatsapp(e.target.value)}
           />
 
-          <div className="input-group">
+          <div className="mt-8 space-y-4">
             <input 
               placeholder="Cidade"
               value={city}
               onChange={e => setCity(e.target.value)}  
             />
             <input 
+              className="w-auto"
+              type="text"
+              maxLength={2}
+              size={2}
               placeholder="UF" 
-              style={{ width: 80 }}
               value={uf}
               onChange={e => setUf(e.target.value)}   
             />            
           </div>
-
-          <button className="button" type="submit">Cadastrar</button>
+          <div className="flex justify-center">
+            <button className="p-4 mt-6 rounded-md border-2 bg-transparent border-slate-300 hover:border-slate-400" type="submit">Cadastrar</button>
+          </div>
         </form>
-      </section>
-      
+      </section>      
     </>
   )
 }
