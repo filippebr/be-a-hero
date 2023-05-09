@@ -59,7 +59,7 @@ export default function Register() {
       </header>
 
       <section className="max-w-3xl w-full justify-center">
-        <form className="space-y-4" onSubmit={handleRegister}>
+        <form className="border-2 rounded-md border-gray-300 p-4 space-y-4" onSubmit={handleRegister}>
           <div className="">
             <label htmlFor="name" className="text-lg font-medium text-gray-500">Nome da Ong</label>
             <input
