@@ -37,11 +37,11 @@ export default function Register() {
   }
 
   return (
-    <div className="grid min-h-screen items-center">    
-      <header className="grid px-4 sm:px-12 lg:px-24 justify-center">
+    <div className="grid min-h-screen items-center px-4 sm:px-12 lg:px-24">    
+      <header className="flex justify-center border border-slate-400">
         <Image 
             className="h-auto w-auto"
-            src={'/logo.svg'}                
+            src={"/logo.svg"}                
             alt="Be The Hero"
             width={250}
             height={106}
@@ -49,7 +49,7 @@ export default function Register() {
             priority
           />
       </header>        
-      <header className="grid grid-rows-2 px-4 sm:px-12 lg:px-24 space-y-4 items-center justify-center">
+      <header className="grid grid-row text-center items-center justify-center border border-slate-400">
         <h1 className="text-4xl">Cadastro</h1>
         <p className="text-lg">Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
         {/* <Link className="back-link" href="/">
@@ -58,43 +58,73 @@ export default function Register() {
         </Link> */}
       </header>
 
-      <section className="grid lg:grid-cols-12 px-4 sm:px-12 lg:px-24">
-        <form className="lg:col-span-12 justify-self-center space-y-4" onSubmit={handleRegister}>
-          <input 
-            placeholder="Nome da ONG" 
-            value={name}
-            onChange={e => setName(e.target.value)}
-          />
-          <input 
-            type="email" 
-            placeholder="E-mail" 
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-          />
-          <input 
-            placeholder="WhatsApp" 
-            value={whatsapp}
-            onChange={e => setWhatsapp(e.target.value)}
-          />
-
-          <div className="mt-8 space-y-4">
-            <input 
-              placeholder="Cidade"
-              value={city}
-              onChange={e => setCity(e.target.value)}  
+      <section className="justify-center border border-red-400">
+        <form className="text-center px-8 sm:px-12 lg:px-24 border border-slate-400" onSubmit={handleRegister}>
+          <div className="">
+            <label htmlFor="name" className="text-lg font-medium text-gray-500">Nome da Ong</label>
+            <input
+              name="name"
+              type="text" 
+              className="focus:ring-red-500 focus:border-red-500"
+              placeholder="Nome da ONG" 
+              value={name}
+              onChange={e => setName(e.target.value)}
             />
+          </div>          
+
+          <div>
+            <label htmlFor="email" className="text-lg font-medium text-gray-500">E-mail</label>
             <input 
-              className="w-auto"
-              type="text"
-              maxLength={2}
-              size={2}
-              placeholder="UF" 
-              value={uf}
-              onChange={e => setUf(e.target.value)}   
-            />            
+              className="focus:ring-red-500 focus:border-red-500"
+              name="email"
+              type="email" 
+              placeholder="E-mail" 
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+            />
+          </div>          
+          
+          <div className="">
+            <label htmlFor="whatsapp" className="text-lg font-medium text-gray-500">WhatsApp</label>
+            <input 
+              name="whatsapp"
+              className="focus:ring-red-500 focus:border-red-500"
+              placeholder="WhatsApp" 
+              value={whatsapp}
+              onChange={e => setWhatsapp(e.target.value)}
+            />
           </div>
-          <div className="flex justify-center">
-            <button className="relative w-full flex justify-center py-3 px-4 border border-transparent text-xl font-medium rounded-md text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Cadastrar</button>
+          
+
+          <div className="space-y-4">
+            <div className="">
+              <label htmlFor="city" className="text-lg font-medium text-gray-500">Cidade</label>
+              <input 
+                name="city"
+                className="focus:ring-red-500 focus:border-red-500"
+                placeholder="Cidade"
+                value={city}
+                onChange={e => setCity(e.target.value)}  
+              />
+            </div>
+            
+            <div className="">
+              <label htmlFor="state" className="text-lg font-medium text-gray-500">Estado</label>
+              <input 
+                className="focus:ring-red-500 focus:border-red-500"
+                name="state"
+                type="text"
+                maxLength={2}
+                size={2}
+                placeholder="UF" 
+                value={uf}
+                onChange={e => setUf(e.target.value)}   
+              />
+            </div>           
+          </div>
+          
+          <div className="justify-center">
+            <button className="relative w-full flex justify-center py-3 px-4 border border-transparent text-xl font-medium rounded-md text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" type="submit">Cadastrar</button>
           </div>
         </form>
       </section>      
