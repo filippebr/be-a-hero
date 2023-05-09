@@ -37,8 +37,8 @@ export default function Register() {
   }
 
   return (
-    <div className="grid min-h-screen items-center px-4 sm:px-12 lg:px-24">    
-      <header className="flex justify-center border border-slate-400">
+    <div className="min-h-screen flex flex-col items-center px-4 sm:px-12 lg:px-24">    
+      <header className="flex justify-center my-10">
         <Image 
             className="h-auto w-auto"
             src={"/logo.svg"}                
@@ -49,7 +49,7 @@ export default function Register() {
             priority
           />
       </header>        
-      <header className="grid grid-row text-center items-center justify-center border border-slate-400">
+      <header className="grid grid-row text-center items-center justify-center mb-10">
         <h1 className="text-4xl">Cadastro</h1>
         <p className="text-lg">Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
         {/* <Link className="back-link" href="/">
@@ -58,14 +58,14 @@ export default function Register() {
         </Link> */}
       </header>
 
-      <section className="justify-center border border-red-400">
-        <form className="text-center px-8 sm:px-12 lg:px-24 border border-slate-400" onSubmit={handleRegister}>
+      <section className="max-w-3xl w-full justify-center">
+        <form className="space-y-4" onSubmit={handleRegister}>
           <div className="">
             <label htmlFor="name" className="text-lg font-medium text-gray-500">Nome da Ong</label>
             <input
+              className="mt-2 focus:ring-red-500 focus:border-red-500"
               name="name"
               type="text" 
-              className="focus:ring-red-500 focus:border-red-500"
               placeholder="Nome da ONG" 
               value={name}
               onChange={e => setName(e.target.value)}
@@ -75,7 +75,7 @@ export default function Register() {
           <div>
             <label htmlFor="email" className="text-lg font-medium text-gray-500">E-mail</label>
             <input 
-              className="focus:ring-red-500 focus:border-red-500"
+              className="mt-2 focus:ring-red-500 focus:border-red-500"
               name="email"
               type="email" 
               placeholder="E-mail" 
@@ -88,7 +88,7 @@ export default function Register() {
             <label htmlFor="whatsapp" className="text-lg font-medium text-gray-500">WhatsApp</label>
             <input 
               name="whatsapp"
-              className="focus:ring-red-500 focus:border-red-500"
+              className="mt-2 focus:ring-red-500 focus:border-red-500"
               placeholder="WhatsApp" 
               value={whatsapp}
               onChange={e => setWhatsapp(e.target.value)}
@@ -101,17 +101,17 @@ export default function Register() {
               <label htmlFor="city" className="text-lg font-medium text-gray-500">Cidade</label>
               <input 
                 name="city"
-                className="focus:ring-red-500 focus:border-red-500"
+                className="mt-2 focus:ring-red-500 focus:border-red-500"
                 placeholder="Cidade"
                 value={city}
                 onChange={e => setCity(e.target.value)}  
               />
             </div>
             
-            <div className="">
+            <div className="grid grid-rows">
               <label htmlFor="state" className="text-lg font-medium text-gray-500">Estado</label>
               <input 
-                className="focus:ring-red-500 focus:border-red-500"
+                className="mt-2 w-20 focus:ring-red-500 focus:border-red-500"
                 name="state"
                 type="text"
                 maxLength={2}
@@ -123,8 +123,8 @@ export default function Register() {
             </div>           
           </div>
           
-          <div className="justify-center">
-            <button className="relative w-full flex justify-center py-3 px-4 border border-transparent text-xl font-medium rounded-md text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" type="submit">Cadastrar</button>
+          <div className="justify-center ">
+            <button className="mt-8 relative w-full flex justify-center py-3 px-4 border border-transparent text-xl font-medium rounded-md text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" type="submit">Cadastrar</button>
           </div>
         </form>
       </section>      
