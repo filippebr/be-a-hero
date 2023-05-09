@@ -87,8 +87,9 @@ export default function Register() {
           <div className="">
             <label htmlFor="whatsapp" className="text-lg font-medium text-gray-500">WhatsApp</label>
             <input 
-              name="whatsapp"
               className="mt-2 focus:ring-red-500 focus:border-red-500"
+              name="whatsapp"
+              type="text"
               placeholder="WhatsApp" 
               value={whatsapp}
               onChange={e => setWhatsapp(e.target.value)}
@@ -100,8 +101,9 @@ export default function Register() {
             <div className="">
               <label htmlFor="city" className="text-lg font-medium text-gray-500">Cidade</label>
               <input 
-                name="city"
                 className="mt-2 focus:ring-red-500 focus:border-red-500"
+                name="city"
+                type="text"
                 placeholder="Cidade"
                 value={city}
                 onChange={e => setCity(e.target.value)}  
