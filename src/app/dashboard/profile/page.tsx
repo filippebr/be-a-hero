@@ -1,12 +1,12 @@
 'use client'
 
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { FiPower } from 'react-icons/fi';
 
 import api from '../../api/services/axiosClient';
 
+import Logo from '@/app/components/Logo';
 import Link from 'next/link';
 
 type Incident = {
@@ -57,20 +57,10 @@ export default function Profile() {
   }
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col items-center px-4 sm:px-12 lg:px-24">
       <header className="py-3 px-4 sm:px-12 lg:px-24">
         <div className="grid lg:grid-cols-12">
-          <div className="lg:col-span-2 justify-self-center">
-            <Image 
-                className="h-auto w-auto"
-                src={'/logo.svg'}                
-                alt="Be The Hero"
-                width={250}
-                height={106}
-                quality={70}
-                priority
-              />
-          </div>       
+          <Logo />      
 
           <div className="lg:col-span-4 py-3 justify-self-center">
             <div className="text-xl">Bem vinda, {ongName}</div>
@@ -116,7 +106,7 @@ export default function Profile() {
         </div> 
       </main>
               
-    </>
+    </div>
   )
 }
 

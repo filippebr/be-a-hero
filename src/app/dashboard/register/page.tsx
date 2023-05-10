@@ -1,6 +1,6 @@
 'use client'
 
-import Image from 'next/image';
+import Logo from '@/app/components/Logo';
 import React, { useState } from 'react';
 
 // import api from '../../services/api';
@@ -39,15 +39,7 @@ export default function Register() {
   return (
     <div className="min-h-screen flex flex-col items-center px-4 sm:px-12 lg:px-24">    
       <header className="flex justify-center my-10">
-        <Image 
-            className="h-auto w-auto"
-            src={"/logo.svg"}                
-            alt="Be The Hero"
-            width={250}
-            height={106}
-            quality={70}
-            priority
-          />
+        <Logo />
       </header>        
       <header className="grid grid-row text-center items-center justify-center mb-10">
         <h1 className="text-4xl">Cadastro</h1>
