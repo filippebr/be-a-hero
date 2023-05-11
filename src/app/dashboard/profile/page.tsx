@@ -64,7 +64,7 @@ export default function Profile() {
         <h1 className="text-4xl">Bem Vinda, {ongName}</h1>        
       </header> 
       
-      <div className="grid grid-cols-12 gap-4 items-center">  
+      <div className="grid grid-cols-12 gap-4 items-center mb-10">  
         <Link 
           className="col-span-10 text-center p-4 bg-red-500 hover:bg-red-700 rounded-lg text-white font-bold text-md" 
           href="/incidents/new">
@@ -75,32 +75,36 @@ export default function Profile() {
         </button>
       </div>
 
-      <main className="py-3 px-6 sm:px-12 lg:px-24">
-        <div className="grid lg:grid-cols-12 ">
-          <h1 className="col-span-4 text-3xl font-bold my-4 lg:justify-self-start justify-self-center">Casos cadastrados</h1>
-        </div>
-        <div className="">
-          <ul className="grid lg:grid-cols-12 gap-4 py-3 px-6 sm:px-12 lg:px-24" >              
-            <li className="col-span-6">
-              <p className="font-bold mb-1 mt-4">CASO: </p>
-              <p>Cadelinha atropelada</p>
-              <p className="font-bold mb-1 mt-4">DESCRIÇÃO: </p>
-              <p>A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas</p>
-              <p className="font-bold mb-1 mt-4">VALOR: </p>
-              <p>R$ 120,00</p>
-            </li>
+      <section className="max-w-3xl w-full justify-center">
+        <div className="border-2 rounded-md border-gray-300 p-4 space-y-4">
+          <div className="flex text-center items-center justify-center mb-5">
+            <h1 className="text-3xl font-bold my-4 lg:justify-self-start justify-self-center">
+              Casos cadastrados
+            </h1>
+          </div>
+          <div className="">
+            <ul className="py-3 px-2 sm:px-4 lg:px-8" >              
+              <li className="col-span-6">
+                <p className="font-bold mb-1 mt-4">CASO: </p>
+                <p>Cadelinha atropelada</p>
+                <p className="font-bold mb-1 mt-4">DESCRIÇÃO: </p>
+                <p>A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas</p>
+                <p className="font-bold mb-1 mt-4">VALOR: </p>
+                <p>R$ 120,00</p>
+              </li>
 
-            <li className="col-span-6">
-              <p className="font-bold mb-1 mt-4">CASO: </p>
-              <p>Cadelinha atropelada</p>
-              <p className="font-bold mb-1 mt-4">DESCRIÇÃO: </p>
-              <p>A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas</p>
-              <p className="font-bold mb-1 mt-4">VALOR: </p>
-              <p>R$ 120,00</p>
-            </li>
-          </ul>
-        </div> 
-      </main>
+              <li className="col-span-6">
+                <p className="font-bold mb-1 mt-4">CASO: </p>
+                <p>Cadelinha atropelada</p>
+                <p className="font-bold mb-1 mt-4">DESCRIÇÃO: </p>
+                <p>A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas</p>
+                <p className="font-bold mb-1 mt-4">VALOR: </p>
+                <p>R$ 120,00</p>
+              </li>
+            </ul>
+          </div> 
+        </div>
+      </section>
               
     </>
   )
