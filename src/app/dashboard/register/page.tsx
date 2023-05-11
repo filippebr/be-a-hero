@@ -42,18 +42,24 @@ export default function Register() {
     <>    
       <TopHeader />
           
-      <header className="grid grid-row text-center items-center justify-center mb-10">
+      <header className="grid grid-row text-center items-center justify-center mb-10 space-y-2">
         <h1 className="text-4xl">Cadastro</h1>
         <p className="text-lg">
           Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.
         </p>
-        <Link className="back-link" href="/">
-          <FiArrowLeft size="16" color="#E02041"/>
-          Não tenho cadastro
-        </Link>
+        
       </header>
 
-      <section className="max-w-3xl w-full justify-center">
+      <section >    
+        <Link className="flex items-center text-lg decoration-0 transition-opacity" href="/">
+          <FiArrowLeft size="16" color="#E02041"/>
+          <p className="ml-2">
+            Não tenho cadastro            
+          </p>
+        </Link>
+      </section>
+
+      <section className="max-w-3xl w-full justify-center">        
         <form className="border-2 rounded-md border-gray-300 p-4 space-y-4" onSubmit={handleRegister}>
           <div className="">
             <label htmlFor="name" className="text-lg font-medium text-gray-500">Nome da Ong</label>
