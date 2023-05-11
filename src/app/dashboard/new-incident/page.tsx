@@ -6,7 +6,7 @@ import { FiArrowLeft } from 'react-icons/fi';
 
 // import api from '../../services/api';
 
-import Logo from '@/app/components/TopHeader';
+import TopHeader from '@/app/components/TopHeader';
 import Link from 'next/link';
 
 export default function NewIncident() {
@@ -42,9 +42,7 @@ export default function NewIncident() {
 
   return (
     <>
-      <header className="flex justify-center my-10">
-        <Logo />
-      </header>
+      <TopHeader /> 
 
       <header className="grid grid-row text-center items-center justify-center mb-10">
         <h1 className="text-4xl">Cadastrar Novo Caso</h1>

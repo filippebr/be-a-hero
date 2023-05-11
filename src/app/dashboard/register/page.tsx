@@ -1,11 +1,11 @@
 'use client'
 
-import Logo from '@/app/components/TopHeader';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
 
 // import api from '../../services/api';
+import TopHeader from '@/app/components/TopHeader';
 
 
 export default function Register() {
@@ -40,13 +40,13 @@ export default function Register() {
 
   return (
     <>    
-      <header className="flex justify-center my-10">
-        <Logo />
-      </header>    
+      <TopHeader />
           
       <header className="grid grid-row text-center items-center justify-center mb-10">
         <h1 className="text-4xl">Cadastro</h1>
-        <p className="text-lg">Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
+        <p className="text-lg">
+          Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.
+        </p>
         <Link className="back-link" href="/">
           <FiArrowLeft size="16" color="#E02041"/>
           Não tenho cadastro

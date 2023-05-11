@@ -6,7 +6,7 @@ import { FiPower } from 'react-icons/fi';
 
 import api from '../../api/services/axiosClient';
 
-import Logo from '@/app/components/TopHeader';
+import TopHeader from '@/app/components/TopHeader';
 import Link from 'next/link';
 
 type Incident = {
@@ -58,9 +58,7 @@ export default function Profile() {
 
   return (
     <>
-      <header className="flex justify-center my-10">
-        <Logo />
-      </header> 
+      <TopHeader />
 
       <header className="flex text-center items-center justify-center mb-10">
         <h1 className="text-4xl">Bem Vinda, {ongName}</h1>        
