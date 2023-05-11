@@ -51,8 +51,8 @@ export default function Register() {
       </header>
 
       <section >    
-        <Link className="flex items-center text-lg decoration-0 transition-opacity" href="/">
-          <FiArrowLeft size="16" color="#E02041"/>
+        <Link className="flex items-center text-lg text-red-400 transition-opacity duration-300 ease-out opacity-50 hover:opacity-100" href="/">
+          <FiArrowLeft size="16" className="text-red-600"/>
           <p className="ml-2">
             Não tenho cadastro            
           </p>

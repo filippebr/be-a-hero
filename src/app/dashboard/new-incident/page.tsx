@@ -54,7 +54,7 @@ export default function NewIncident() {
       </header>
       
       <section >    
-        <Link className="back-link" href="/profile">
+        <Link className="flex items-center text-lg text-red-400 transition-opacity duration-300 ease-out opacity-50 hover:opacity-100" href="/profile">
           <FiArrowLeft size="16" color="#E02041"/>
           Voltar para home
         </Link>
