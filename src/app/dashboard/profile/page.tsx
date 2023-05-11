@@ -58,26 +58,24 @@ export default function Profile() {
 
   return (
     <>
-      <header className="py-3 px-4 sm:px-12 lg:px-24">
-        <div className="grid lg:grid-cols-12">
-          <Logo />      
+      <header className="flex justify-center my-10">
+        <Logo />
+      </header> 
 
-          <div className="lg:col-span-4 py-3 justify-self-center">
-            <div className="text-xl">Bem vinda, {ongName}</div>
-          </div>
-          
-          <div className="flex lg:col-span-6 lg:justify-self-end justify-self-center gap-6 items-center">
-            <Link 
-              className="p-4 bg-red-500 hover:bg-red-700 rounded-lg text-white font-bold text-md" 
-              href="/incidents/new">
-                Cadastrar novo caso
-            </Link>        
-            <button className="p-4 rounded-md border-2 bg-transparent border-slate-300 hover:border-slate-400" onClick={handleLogout} type="button">
-              <FiPower className="text-xl text-red-500" />
-            </button>
-          </div>  
-        </div>      
-      </header>  
+      <header className="flex text-center items-center justify-center mb-10">
+        <h1 className="text-4xl">Bem Vinda, {ongName}</h1>        
+      </header> 
+      
+      <div className="grid grid-cols-12 gap-4 items-center">  
+        <Link 
+          className="col-span-10 text-center p-4 bg-red-500 hover:bg-red-700 rounded-lg text-white font-bold text-md" 
+          href="/incidents/new">
+            Cadastrar novo caso
+        </Link>            
+        <button className="col-span-2 p-4 rounded-md border-2 bg-transparent border-slate-300 hover:border-slate-400" onClick={handleLogout} type="button">
+          <FiPower className="text-xl text-red-500" />
+        </button>
+      </div>
 
       <main className="py-3 px-6 sm:px-12 lg:px-24">
         <div className="grid lg:grid-cols-12 ">
