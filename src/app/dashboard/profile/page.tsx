@@ -57,7 +57,7 @@ export default function Profile() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-4 sm:px-12 lg:px-24">
+    <>
       <header className="py-3 px-4 sm:px-12 lg:px-24">
         <div className="grid lg:grid-cols-12">
           <Logo />      
@@ -106,7 +106,7 @@ export default function Profile() {
         </div> 
       </main>
               
-    </div>
+    </>
   )
 }
 

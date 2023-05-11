@@ -1,5 +1,5 @@
-import './globals.css'
 import { Inter } from 'next/font/google'
+import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ fontFamily: 'Roboto, Inter, sans-serif' }} >{children}</body>
+      <body style={{ fontFamily: 'Roboto, Inter, sans-serif' }} >
+        <div className="min-h-screen flex flex-col items-center px-4 sm:px-12 lg:px-24" >
+          {children}
+        </div>        
+      </body>        
     </html>
   )
 }

@@ -41,7 +41,7 @@ export default function NewIncident() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-4 sm:px-12 lg:px-24">    
+    <>
       <header className="flex justify-center my-10">
         <Logo />
       </header>        
@@ -99,8 +99,9 @@ export default function NewIncident() {
 
           <button className="mt-8 relative w-full flex justify-center py-3 px-4 border border-transparent text-xl font-medium rounded-md text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" type="submit">Cadastrar</button>
         </form>
-      </section>      
-    </div>
+      </section>    
+    </>
+        
   );
 }
 

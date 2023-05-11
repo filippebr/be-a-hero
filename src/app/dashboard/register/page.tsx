@@ -37,7 +37,7 @@ export default function Register() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-4 sm:px-12 lg:px-24">    
+    <>    
       <header className="flex justify-center my-10">
         <Logo />
       </header>        
@@ -122,7 +122,7 @@ export default function Register() {
           </div>
         </form>
       </section>      
-    </div>
+    </>
   )
 }
 
