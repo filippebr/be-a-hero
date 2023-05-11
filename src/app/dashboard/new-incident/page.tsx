@@ -6,7 +6,7 @@ import { FiArrowLeft } from 'react-icons/fi';
 
 // import api from '../../services/api';
 
-import Logo from '@/app/components/Logo';
+import Logo from '@/app/components/TopHeader';
 import Link from 'next/link';
 
 export default function NewIncident() {
@@ -44,7 +44,8 @@ export default function NewIncident() {
     <>
       <header className="flex justify-center my-10">
         <Logo />
-      </header>        
+      </header>
+
       <header className="grid grid-row text-center items-center justify-center mb-10">
         <h1 className="text-4xl">Cadastrar Novo Caso</h1>
         <p className="text-lg">Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
@@ -53,6 +54,7 @@ export default function NewIncident() {
           Não tenho cadastro
         </Link> */}
       </header>
+      
       <section >    
         <Link className="back-link" href="/profile">
           <FiArrowLeft size="16" color="#E02041"/>

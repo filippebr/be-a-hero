@@ -8,7 +8,7 @@ import { FiLogIn } from 'react-icons/fi';
 
 import api from '../../api/services/axiosClient';
 
-import Logo from '@/app/components/Logo';
+import TopHeader from '@/app/components/TopHeader';
 
 export default function Logon() {
   const [id, setId] = useState('');
@@ -32,10 +32,8 @@ export default function Logon() {
   }
 
   return (
-    <>      
-      <header className="flex justify-center my-10">
-        <Logo />
-      </header>          
+    <>        
+      <TopHeader />        
       <form onSubmit={handleLogin}>
         <h1 className="mt-4 py-2 text-center text-3xl">
           Faça seu login

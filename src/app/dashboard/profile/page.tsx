@@ -6,7 +6,7 @@ import { FiPower } from 'react-icons/fi';
 
 import api from '../../api/services/axiosClient';
 
-import Logo from '@/app/components/Logo';
+import Logo from '@/app/components/TopHeader';
 import Link from 'next/link';
 
 type Incident = {
