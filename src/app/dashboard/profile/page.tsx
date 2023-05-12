@@ -70,7 +70,7 @@ export default function Profile() {
           href="/incidents/new">
             Cadastrar novo caso
         </Link>            
-        <button className="col-span-2 p-4 rounded-md border-2 bg-transparent border-slate-300 hover:border-slate-400" onClick={handleLogout} type="button">
+        <button className="col-span-2 p-4 rounded-md border-2 bg-transparent border-slate-400 hover:border-slate-500" onClick={handleLogout} type="button">
           <FiPower className="text-xl text-red-500" />
         </button>
       </div>

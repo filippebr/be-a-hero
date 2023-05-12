@@ -46,15 +46,13 @@ export default function NewIncident() {
 
       <header className="grid grid-row text-center items-center justify-center mb-10">
         <h1 className="text-4xl">Cadastrar Novo Caso</h1>
-        <p className="text-lg">Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
-        {/* <Link className="back-link" href="/">
-          <FiArrowLeft size="16" color="#E02041"/>
-          Não tenho cadastro
-        </Link> */}
+        <p className="text-lg">
+          Descreva o caso detalhadamente para encontrar um herói para resolver isso.
+        </p>        
       </header>
       
       <section >    
-        <Link className="flex items-center text-lg text-red-400 transition-opacity duration-300 ease-out opacity-50 hover:opacity-100" href="/profile">
+        <Link className="flex items-center text-lg text-red-600 transition-opacity duration-300 ease-out opacity-75 hover:opacity-100" href="/profile">
           <FiArrowLeft size="16" color="#E02041"/>
           Voltar para home
         </Link>
@@ -78,7 +76,7 @@ export default function NewIncident() {
           <div className="">
             <label htmlFor="description" className="text-lg font-medium text-gray-500">Descrição</label>
             <textarea
-              className="mt-2 focus:ring-red-500 focus:border-red-500"
+              className="w-full resize-y h-24 mt-2 focus:ring-red-500 focus:border-red-500"
               name="description"
               placeholder="Descrição" 
               value={description}
@@ -89,11 +87,11 @@ export default function NewIncident() {
           <div className="">
             <label htmlFor="value" className="text-lg font-medium text-gray-500">Valor em Reais</label>
             <textarea
-              className="mt-2 focus:ring-red-500 focus:border-red-500"
+              className="w-full resize-y h-24 mt-2 focus:ring-red-500 focus:border-red-500"
               name="value"
               placeholder="Valor em reais" 
               value={value}
-              onChange={e => setDescription(e.target.value)}              
+              onChange={e => setValue(e.target.value)}              
             />
           </div> 
 

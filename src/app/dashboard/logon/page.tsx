@@ -47,12 +47,12 @@ export default function Logon() {
         />
         <button className="w-full h-22 mt-4 py-4 bg-red-500 hover:bg-red-700 rounded-lg text-white items-center font-bold text-md transition-opacity duration-300" type="submit">Entrar</button>
         <div className="grid grid-cols-2 gap-2 mt-4 items-center">
-          <Link className="flex text-md items-center text-lg text-black-400 transition-opacity duration-300 ease-out opacity-50 hover:opacity-100" href="/register">
+          <Link className="flex text-md items-center text-lg text-gray-600 transition-opacity duration-300 ease-out opacity-75 hover:opacity-100" href="/register">
             <FiLogIn className="mr-2 text-xl text-red-500" />
             Não tenho cadastro
           </Link>
 
-          <div className="text-md items-center text-lg text-red-400 transition-opacity duration-300 ease-out opacity-50 hover:opacity-100">
+          <div className="text-md items-center text-lg text-red-600 transition-opacity duration-300 ease-out opacity-75 hover:opacity-100">
             <a href="#" className="font-medium">
               Esqueci o password
             </a>
