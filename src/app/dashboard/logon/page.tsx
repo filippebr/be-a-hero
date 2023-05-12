@@ -40,7 +40,7 @@ export default function Logon() {
           Faça seu login
         </h1>
         <input 
-          className="mt-4"
+          className="w-full mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300"
           placeholder="Sua ID" 
           value={id}
           onChange={e => setId(e.target.value)}
