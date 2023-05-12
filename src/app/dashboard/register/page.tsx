@@ -64,7 +64,7 @@ export default function Register() {
           <div className="">
             <label htmlFor="name" className="text-lg font-medium text-gray-500">Nome da Ong</label>
             <input
-              className="w-full h-16 mt-2 py-4 px-6 border-2 border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300 focus:outline-none"
+              className="w-full h-16 mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300 focus:outline-none"
               name="name"
               type="text" 
               placeholder="Nome da ONG" 
@@ -76,7 +76,7 @@ export default function Register() {
           <div>
             <label htmlFor="email" className="text-lg font-medium text-gray-500">E-mail</label>
             <input 
-              className="w-full h-16 mt-2 py-4 px-6 border-2 border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300 focus:outline-none"
+              className="w-full h-16 mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300 focus:outline-none"
               name="email"
               type="email" 
               placeholder="E-mail" 
@@ -88,7 +88,7 @@ export default function Register() {
           <div className="">
             <label htmlFor="whatsapp" className="text-lg font-medium text-gray-500">WhatsApp</label>
             <input 
-              className="w-full h-16 mt-2 py-4 px-6 border-2 border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300 focus:outline-none"
+              className="w-full h-16 mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300 focus:outline-none"
               name="whatsapp"
               type="text"
               placeholder="WhatsApp" 
@@ -102,7 +102,7 @@ export default function Register() {
             <div className="">
               <label htmlFor="city" className="text-lg font-medium text-gray-500">Cidade</label>
               <input 
-                className="w-full h-16 mt-2 py-4 px-6 border-2 border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300 focus:outline-none"
+                className="w-full h-16 mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300 focus:outline-none"
                 name="city"
                 type="text"
                 placeholder="Cidade"
@@ -114,7 +114,7 @@ export default function Register() {
             <div className="grid grid-rows">
               <label htmlFor="state" className="text-lg font-medium text-gray-500">Estado</label>
               <input 
-                className="w-20 h-16 mt-2 py-4 px-6 border-2 border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300 focus:outline-none"
+                className="w-20 h-16 mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300 focus:outline-none"
                 name="state"
                 type="text"
                 maxLength={2}

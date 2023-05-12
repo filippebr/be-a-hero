@@ -64,7 +64,7 @@ export default function NewIncident() {
           <div className="">
             <label htmlFor="title" className="text-lg font-medium text-gray-500">Título do Caso</label>
             <input
-              className="w-full h-16 mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300"
+              className="w-full h-16 mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300 focus:outline-none"
               name="title"
               type="text" 
               placeholder="Título do caso" 
@@ -76,7 +76,7 @@ export default function NewIncident() {
           <div className="">
             <label htmlFor="description" className="text-lg font-medium text-gray-500">Descrição</label>
             <textarea
-              className="w-full resize-y h-24 mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300"
+              className="w-full resize-y h-24 mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300 focus:outline-none"
               name="description"
               placeholder="Descrição" 
               value={description}
@@ -87,7 +87,7 @@ export default function NewIncident() {
           <div className="">
             <label htmlFor="value" className="text-lg font-medium text-gray-500">Valor em Reais</label>
             <textarea
-              className="w-full resize-y h-24 mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300"
+              className="w-full resize-y h-24 mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300 focus:outline-none"
               name="value"
               placeholder="Valor em reais" 
               value={value}

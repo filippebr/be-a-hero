@@ -76,7 +76,7 @@ export default function Profile() {
       </div>
 
       <section className="max-w-3xl w-full justify-center">
-        <div className="border-2 rounded-md border-gray-300 p-4 space-y-4">
+        <div className="border-2 rounded-lg border-gray-300 p-4 space-y-4">
           <div className="flex text-center items-center justify-center">
             <h1 className="text-3xl font-bold my-2 lg:justify-self-start justify-self-center">
               Casos cadastrados
