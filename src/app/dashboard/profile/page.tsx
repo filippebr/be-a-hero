@@ -85,20 +85,20 @@ export default function Profile() {
           <div className="">
             <ul className="py-3 px-2 sm:px-4 lg:px-8" >              
               <li className="col-span-6 mb-8">
-                <p className="font-bold mb-1 mt-4">CASO: </p>
+                <p className="text-md font-bold mb-1 mt-4">CASO: </p>
                 <p>Cadelinha atropelada</p>
-                <p className="font-bold mb-1 mt-4">DESCRIÇÃO: </p>
+                <p className="text-md font-bold mb-1 mt-4">DESCRIÇÃO: </p>
                 <p>A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas</p>
-                <p className="font-bold mb-1 mt-4">VALOR: </p>
+                <p className="text-md font-bold mb-1 mt-4">VALOR: </p>
                 <p>R$ 120,00</p>
               </li>
 
               <li className="col-span-6">
-                <p className="font-bold mb-1 mt-4">CASO: </p>
+                <p className="text-md font-bold mb-1 mt-4">CASO: </p>
                 <p>Cadelinha atropelada</p>
-                <p className="font-bold mb-1 mt-4">DESCRIÇÃO: </p>
+                <p className="text-md font-bold mb-1 mt-4">DESCRIÇÃO: </p>
                 <p>A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas</p>
-                <p className="font-bold mb-1 mt-4">VALOR: </p>
+                <p className="text-md font-bold mb-1 mt-4">VALOR: </p>
                 <p>R$ 120,00</p>
               </li>
             </ul>

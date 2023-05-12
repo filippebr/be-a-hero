@@ -87,7 +87,7 @@ export default function NewIncident() {
           <div className="">
             <label htmlFor="value" className="text-lg font-medium text-gray-500">Valor em Reais</label>
             <textarea
-              className="w-full resize-y h-24 mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+              className="w-full resize-y h-24 mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300"
               name="value"
               placeholder="Valor em reais" 
               value={value}
