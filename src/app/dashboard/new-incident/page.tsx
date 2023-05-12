@@ -64,7 +64,7 @@ export default function NewIncident() {
           <div className="">
             <label htmlFor="title" className="text-lg font-medium text-gray-500">Título do Caso</label>
             <input
-              className="mt-2 focus:ring-red-500 focus:border-red-500"
+              className="w-full h-16 mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300"
               name="title"
               type="text" 
               placeholder="Título do caso" 
@@ -76,7 +76,7 @@ export default function NewIncident() {
           <div className="">
             <label htmlFor="description" className="text-lg font-medium text-gray-500">Descrição</label>
             <textarea
-              className="w-full resize-y h-24 mt-2 focus:ring-red-500 focus:border-red-500"
+              className="w-full resize-y h-24 mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-300 focus:border-red-300"
               name="description"
               placeholder="Descrição" 
               value={description}
@@ -87,7 +87,7 @@ export default function NewIncident() {
           <div className="">
             <label htmlFor="value" className="text-lg font-medium text-gray-500">Valor em Reais</label>
             <textarea
-              className="w-full resize-y h-24 mt-2 focus:ring-red-500 focus:border-red-500"
+              className="w-full resize-y h-24 mt-2 py-4 px-6 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
               name="value"
               placeholder="Valor em reais" 
               value={value}
@@ -95,7 +95,12 @@ export default function NewIncident() {
             />
           </div> 
 
-          <button className="mt-8 relative w-full flex justify-center py-3 px-4 border border-transparent text-xl font-medium rounded-md text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" type="submit">Cadastrar</button>
+          <button 
+            className="mt-8 relative w-full flex justify-center py-3 px-4 border border-transparent text-xl font-medium rounded-md text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" 
+            type="submit"
+          >
+              Cadastrar
+          </button>
         </form>
       </section>    
     </>
