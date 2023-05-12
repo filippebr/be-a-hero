@@ -70,21 +70,21 @@ export default function Profile() {
           href="/incidents/new">
             Cadastrar novo caso
         </Link>            
-        <button className="col-span-2 p-4 rounded-md border-2 bg-transparent border-slate-400 hover:border-slate-500" onClick={handleLogout} type="button">
+        <button className="col-span-2 p-4 rounded-md border-2 bg-transparent border-gray-300 hover:border-gray-400" onClick={handleLogout} type="button">
           <FiPower className="text-xl text-red-500" />
         </button>
       </div>
 
       <section className="max-w-3xl w-full justify-center">
         <div className="border-2 rounded-md border-gray-300 p-4 space-y-4">
-          <div className="flex text-center items-center justify-center mb-5">
-            <h1 className="text-3xl font-bold my-4 lg:justify-self-start justify-self-center">
+          <div className="flex text-center items-center justify-center">
+            <h1 className="text-3xl font-bold my-2 lg:justify-self-start justify-self-center">
               Casos cadastrados
             </h1>
           </div>
           <div className="">
             <ul className="py-3 px-2 sm:px-4 lg:px-8" >              
-              <li className="col-span-6">
+              <li className="col-span-6 mb-8">
                 <p className="font-bold mb-1 mt-4">CASO: </p>
                 <p>Cadelinha atropelada</p>
                 <p className="font-bold mb-1 mt-4">DESCRIÇÃO: </p>
