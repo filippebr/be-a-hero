@@ -9,3 +9,22 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Incident {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  value       Float
+  ong         Ong     @relation(fields: [ongId], references: [id])
+  ongId       String
+}
+
+model Ong {
+  id        String  @id @default(uuid())
+  name      String
+  email     String  @unique
+  whatsapp  String
+  city      String
+  uf        String  @db.VarChar(2)
+  incidents Incident[]
+}
