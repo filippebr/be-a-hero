@@ -35,7 +35,7 @@ export default function Logon() {
     <>        
       <TopHeader />  
             
-      <form className="border-2 rounded-md border-gray-300 p-4 space-y-4 mb-10" onSubmit={handleLogin}>
+      <form className="border-2 rounded-lg border-gray-300 p-4 space-y-4 mb-10" onSubmit={handleLogin}>
         <h1 className="mt-4 py-2 text-center text-3xl">
           Faça seu login
         </h1>

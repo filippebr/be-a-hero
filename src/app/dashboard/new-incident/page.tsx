@@ -59,7 +59,7 @@ export default function NewIncident() {
       </section>
 
       <section className="max-w-3xl w-full justify-center">
-        <form className="border-2 rounded-md border-gray-300 p-4 space-y-4" onSubmit={handleNewIncident}>
+        <form className="border-2 rounded-lg border-gray-300 p-4 space-y-4" onSubmit={handleNewIncident}>
           
           <div className="">
             <label htmlFor="title" className="text-lg font-medium text-gray-500">Título do Caso</label>
@@ -96,7 +96,7 @@ export default function NewIncident() {
           </div> 
 
           <button 
-            className="mt-8 relative w-full flex justify-center py-3 px-4 border border-transparent text-xl font-medium rounded-md text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" 
+            className="mt-8 relative w-full flex justify-center py-3 px-4 border border-transparent text-xl font-medium rounded-lg text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" 
             type="submit"
           >
               Cadastrar
