@@ -6,25 +6,25 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
 model Incident {
-  id          Int      @id @default(autoincrement())
+  id          Int    @id @default(autoincrement())
   title       String
   description String
   value       Float
-  ong         Ong     @relation(fields: [ongId], references: [id])
+  ong         Ong    @relation(fields: [ongId], references: [id])
   ongId       String
 }
 
 model Ong {
-  id        String  @id @default(uuid())
+  id        String     @id @default(uuid())
   name      String
-  email     String  @unique
+  email     String     @unique
   whatsapp  String
   city      String
-  uf        String  @db.VarChar(2)
+  uf        String
   incidents Incident[]
 }
