@@ -22,8 +22,8 @@ export default function Logon() {
 
       console.log(response);
 
-      localStorage.setItem('ongId', id);
-      localStorage.setItem('ongName', response.data.name);
+      // localStorage.setItem('ongId', id);
+      // localStorage.setItem('ongName', response.data.name);
 
       router.push('/profile');
     } catch (err) {
